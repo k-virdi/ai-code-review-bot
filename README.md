@@ -28,7 +28,7 @@ flowchart TD
 ## Quickstart
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/python-review-bot.git
+git clone https://github.com/k-virdi/python-review-bot.git
 cd python-review-bot
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
