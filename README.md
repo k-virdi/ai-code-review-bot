@@ -25,36 +25,6 @@ flowchart TD
   C -- ok --> F[Finalize report]
 ```
 
-## Quickstart
-
-```bash
-git clone https://github.com/k-virdi/python-review-bot.git
-cd python-review-bot
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-cp .env.example .env  # add OPENAI_API_KEY
-make ingest           # build the RAG index
-```
-
-### CLI
-
-```bash
-prb examples/buggy/example_sort_users.py -i "Return a new list of unique users sorted by signup_date, without mutating input."
-```
-
-### API
-
-```bash
-make api
-curl -X POST localhost:8000/review -H 'content-type: application/json' \
-  -d '{"code":"def f(x):\n return x.sort()", "intent":"return sorted copy"}'
-```
-
-### UI
-
-```bash
-make ui
-```
 
 ## Tech Stack
 FastAPI · LangGraph · OpenAI · ChromaDB · BM25 · Rank-BM25 · tiktoken · Pydantic v2 ·
